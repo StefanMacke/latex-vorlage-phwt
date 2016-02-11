@@ -1,0 +1,86 @@
+% ------------------------------------------------------------------------------
+% Formatvorlage für Referatsausarbeitungen an der FHWT Vechta
+% ------------------------------------------------------------------------------
+%   erstellt von Stefan Macke, 30.01.2013
+%   http://blog.macke.it
+
+% Dokumentenkopf ---------------------------------------------------------------
+%   Diese Vorlage basiert auf "scrreprt" aus dem koma-script.
+% ------------------------------------------------------------------------------
+\documentclass[
+    11pt, % Schriftgröße
+    DIV10,
+    ngerman, % für Umlaute, Silbentrennung etc.
+    a4paper, % Papierformat
+    oneside, % einseitiges Dokument
+    titlepage, % es wird eine Titelseite verwendet
+    parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
+    headings=normal, % Größe der Überschriften verkleinern
+    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
+    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+    index=totoc, % Index im Inhaltsverzeichnis aufführen
+    captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+    final % Status des Dokuments (final/draft)
+]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+% Meta-Informationen -----------------------------------------------------------
+%   Informationen über das Dokument, wie z.B. Titel, Autor, Matrikelnr. etc
+%   werden in der Datei Meta.tex definiert und können danach global
+%   verwendet werden.
+% ------------------------------------------------------------------------------
+\input{Meta}
+
+% benötigte Packages -----------------------------------------------------------
+%   LaTeX-Packages, die benötigt werden, sind in die Datei Packages.tex
+%   "ausgelagert", um diese Vorlage möglichst übersichtlich zu halten.
+% ------------------------------------------------------------------------------
+\input{../../Packages}
+
+% Erstellung eines Abkürzungsverzeichnisses aktivieren ---------------
+\makenomenclature
+
+% Kopf- und Fußzeilen, Seitenränder etc. ---------------------------------------
+\input{../../Seitenstil}
+
+% eigene LaTeX-Befehle, verwendbar in allen Referaten
+\input{../../Befehle}
+
+% Das eigentliche Dokument -----------------------------------------------------
+%   Der eigentliche Inhalt des Dokuments beginnt hier. Die einzelnen Seiten
+%   und Kapitel werden in eigene Dateien ausgelagert und hier nur inkludiert.
+% ------------------------------------------------------------------------------
+\begin{document}
+
+
+% Deckblatt ohne Seitenzahl
+\ofoot{}
+\input{../../Deckblatt}
+\ofoot{\pagemark}
+
+% Seitennummerierung -----------------------------------------------------------
+%   Vor dem Hauptteil werden die Seiten in großen römischen Ziffern 
+%   nummeriert.
+% ------------------------------------------------------------------------------
+\pagenumbering{Roman}
+\tableofcontents % Inhaltsverzeichnis
+
+\clearpage
+\markboth{Verzeichnisse}{Verzeichnisse}
+\renewcommand{\lstlistlistingname}{Verzeichnis der Listings}
+\input{Verzeichnisse}
+\clearpage
+
+% Abkürzungsverzeichnis --------------------------------------------------------
+\newcommand{\abkvz}{Abkürzungsverzeichnis}
+\renewcommand{\nomname}{\abkvz}
+\section*{\abkvz}
+\markboth{\abkvz}{\abkvz}
+\addcontentsline{toc}{section}{\abkvz}
+\input{../../Abkuerzungen}
+\clearpage
+
+% arabische Seitenzahlen im Hauptteil ------------------------------------------
+\clearpage
+\pagenumbering{arabic}
