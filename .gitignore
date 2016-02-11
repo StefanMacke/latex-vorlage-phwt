@@ -1,2 +1,9 @@
 test/
 test*
+/Vorlag.synctex.gz
+/Vorlage.pdf
+/Vorlage.synctex.gz
+/tmp/
+*.lol
+*.nlo
+*.nls
