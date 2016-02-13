@@ -1,6 +1,6 @@
 % Seitenränder -----------------------------------------------------------------
 \setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
-\geometry{a4paper,left=25mm,right=20mm,top=20mm,bottom=25mm,includefoot,footskip=15mm}
+\geometry{a4paper,left=25mm,right=20mm,top=25mm,bottom=25mm,includefoot,footskip=15mm}
 
 \usepackage[
 	automark, % Kapitelangaben in Kopfzeile automatisch erstellen
@@ -16,19 +16,19 @@
 \renewcommand{\headfont}{\normalfont} % Schriftform der Kopfzeile
 \ihead{\large{\textsc{\titel}}\\ \small{\untertitel} \\[2ex] \textit{\headmark}}
 \chead{}
-\ohead{\includegraphics[scale=0.5]{../../Bilder/FHWTLogoKlein.jpg}}
+\ohead{\includegraphics[scale=0.3]{../../Bilder/PHWTLogo.jpg}}
 \setlength{\headheight}{20mm} % Höhe der Kopfzeile
 
 % Fußzeile
-\ifoot{\copyright\ \autor}
+\ifoot{\autor, \jahr}
 \cfoot{}
 \ofoot{\pagemark}
 
-\frenchspacing % erzeugt ein wenig mehr Platz hinter einem Punkt 
+\frenchspacing % erzeugt ein wenig mehr Platz hinter einem Punkt
 
 % Schusterjungen und Hurenkinder vermeiden
 \clubpenalty = 10000
-\widowpenalty = 10000 
+\widowpenalty = 10000
 \displaywidowpenalty = 10000
 
 % Quellcode-Ausgabe formatieren
