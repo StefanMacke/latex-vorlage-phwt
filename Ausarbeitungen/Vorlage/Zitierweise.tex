@@ -1,0 +1,13 @@
+% zum Wechseln vom Chicago in den Harvard-Style müssen die Zeilen des Chicago-Styles deaktiviert und
+%  die des Harvard-Styles aktiviert werden. Die gilt nur für diese Ausarbeitung.
+
+% (z.B. \Zitati[S.~69]{Martin2008a})
+
+% Zitate
+\newcommand{\Zitati}[2][\empty]{\footnote{\Vgl \allgemeinesZitat[#1]{#2}.}} % indirektes Zitat im Chicago-Style
+\newcommand{\Zitatd}[2][\empty]{\footnote{\allgemeinesZitat[#1]{#2}.}} % direktes Zitat im Chicago-Style
+
+%\newcommand{\Zitati}[2][\empty]{ (\vgl \allgemeinesZitat[#1]{#2})} % indirektes Zitat im Harvard-Style
+%\newcommand{\Zitatd}[2][\empty]{ (\allgemeinesZitat[#1]{#2})} % direktes Zitat im Harvard-Style
+% nur für intern, sollte nicht in Ausarbeitungen genutzt werden:
+\newcommand{\allgemeinesZitat}[2][\empty]{\ifthenelse{\equal{#1}{\empty}}{\citep{#2}}{\citep[#1]{#2}}}
