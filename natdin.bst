@@ -182,6 +182,7 @@ FUNCTION { ua.etal } { " u.\,a." }  %% evtl. auch in eckigen Klammern  " [u.\,a.
 
 %%  oder lateinisch:  FUNCTION { ua.etal } { " et~al." }
 
+
 FUNCTION { und } { " und " }
 
 %%  oder ausgeschrieben:  FUNCTION { und } { " und " }
@@ -427,7 +428,7 @@ FUNCTION {format.online.lastcheck}
              cite$ * warning$
           }
           { part.of.sentence
-            lastchecked "Abruf: " swap$ * output
+            lastchecked "Abruf:~" swap$ * output
           }
         if$
       }
