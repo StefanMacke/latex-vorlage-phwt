@@ -1,0 +1,29 @@
+% Abkürzungen, ggf. mit korrektem Leerraum
+\newcommand{\bs}{$\backslash$\xspace}
+\newcommand{\bspw}{bspw.\xspace}
+\newcommand{\bzw}{bzw.\xspace}
+\newcommand{\ca}{ca.\xspace}
+\newcommand{\dahe}{\mbox{d.\,h.}\xspace}
+\newcommand{\etc}{etc.\xspace}
+\newcommand{\eur}[1]{\mbox{#1\,\texteuro}\xspace}
+\newcommand{\evtl}{evtl.\xspace}
+\newcommand{\ggf}{ggf.\xspace}
+\newcommand{\Ggf}{Ggf.\xspace}
+\newcommand{\gqq}[1]{\glqq{}#1\grqq{}}
+\newcommand{\inkl}{inkl.\xspace}
+\newcommand{\insb}{insb.\xspace}
+\newcommand{\ua}{\mbox{u.\,a.}\xspace}
+\newcommand{\usw}{usw.\xspace}
+\newcommand{\Vgl}{Vgl.~}
+\newcommand{\vgl}{vgl.~}
+\newcommand{\zB}{\mbox{z.\,B.}\xspace}
+
+% Befehle für häufig anfallende Aufgaben
+\newcommand{\Abbildung}[1]{\autoref{fig:#1}}
+\newcommand{\Anhang}[1]{\appendixname{}~\ref{#1}: \nameref{#1} \vpageref{#1}} % Referenzierung eines Anhangs
+\newcommand{\includegraphicsKeepAspectRatio}[2]{\includegraphics[width=#2\textwidth,height=#2\textheight,keepaspectratio]{#1}} % Einfügen einer Graphik und Seitenverhältnis beibehalten
+\newcommand{\includegraphicsRotateAndKeepAspectRatio}[2]{\includegraphics[width=#2\textheight,height=#2\textwidth,keepaspectratio,angle=90,origin=c]{#1}} % Einfügen einer entgegen dem Uhrzeigersinn gedrehten Graphik und Seitenverhältnis beibehalten
+\newcommand{\itemd}[2]{\item{\bf{#1}}\\{#2}} % erzeugt ein Listenelement mit fetter Überschrift
+\newcommand{\Kapitel}[1]{Kapitel~\ref{sec:#1}~(\nameref{sec:#1})} % Referenzierung eines Kapitels
+\newcommand{\Abschnitt}[1]{Abschnitt~\ref{subsec:#1}~(\nameref{subsec:#1})} % Referenzierung eines Abschnitts
+\newcommand{\Unterabschnitt}[1]{Unterabschnitt~\ref{subsubsec:#1}~(\nameref{subsubsec:#1})} % Referenzierung eines Unterabschnitts

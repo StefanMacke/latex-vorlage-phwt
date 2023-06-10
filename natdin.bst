@@ -178,13 +178,14 @@ ENTRY
 
 %  Abkuerzung ("... und andere") bei Mehrverfasserquellen:
 
-FUNCTION { ua.etal } { " u.\,a." }  %% evtl. auch in eckigen Klammern  " [u.\,a.]"
+FUNCTION { ua.etal } { " et~al." }
 
-%%  oder lateinisch:  FUNCTION { ua.etal } { " et~al." }
+%%  oder deutsch:  FUNCTION { ua.etal } { " u.\,a." }  %% evtl. auch in eckigen Klammern  " [u.\,a.]"
+
 
 FUNCTION { und } { " und " }
 
-%%  oder ausgeschrieben:  FUNCTION { und } { " und " }
+%%  oder ausgeschrieben:  FUNCTION { und } { " / " }
 
 
 % Einige elektronische Medien erhalten nach DIN 1505 eine "Ergaenzende Angabe"
@@ -427,7 +428,7 @@ FUNCTION {format.online.lastcheck}
              cite$ * warning$
           }
           { part.of.sentence
-            lastchecked "Abruf: " swap$ * output
+            lastchecked "Abruf:~" swap$ * output
           }
         if$
       }
